@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">BoozeTracker</string>
+    <string name="app_name">Booze Tracker</string>
+    <string name="new_drink">Log your tipple</string>
+    <string name="save">Save drink</string>
+    <string name="enter_new_drink">What did you have?</string>
+    <string name="new_date">What date?</string>
+    <string name="new_time">What time?</string>
 </resources>
