@@ -37,10 +37,10 @@ public class ViewDrink extends AppCompatActivity {
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
         final int id = extras.getInt("id");
-        final String drinkName = extras.getString("drinkName");
-        final String date = extras.getString("date");
-        final String time = extras.getString("time");
-        final String location = extras.getString("location");
+        String drinkName = extras.getString("drinkName");
+        String date = extras.getString("date");
+        String time = extras.getString("time");
+        String location = extras.getString("location");
 
         drinkNameText.setText(drinkName);
         dateText.setText(date);

@@ -5,11 +5,13 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by user on 16/12/2016.
@@ -17,20 +19,20 @@ import java.util.ArrayList;
 
 public class BoozeTracker extends AppCompatActivity {
 
-        ListView ListView;
-        Button NewDrinkButton;
+        ListView listView;
+        Button newDrinkButton;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
 
-            ListView = (ListView) findViewById(R.id.booze_list);
-            NewDrinkButton = (Button)findViewById(R.id.button_new);
+            listView = (ListView) findViewById(R.id.booze_list);
+            newDrinkButton = (Button)findViewById(R.id.button_new);
 
             final DBHandler db = ((MainApplication)getApplication()).db;
 
-          // db.deleteAllBoozeEntries();
+           // db.deleteAllBoozeEntries();
             Log.d("Insert: ", "Inserting..");
            // db.addBooze(new Booze("Pint of Joker I.P.A", "08/12/16", "17:59", "Footlights"));
           //  db.addBooze(new Booze("Vodka Coke", "09/12/16", "18:30", "Moriarty"));
@@ -38,9 +40,22 @@ public class BoozeTracker extends AppCompatActivity {
 
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                     android.R.layout.simple_list_item_1, getAllBooze(db));
-            ListView.setAdapter(adapter);
+            listView.setAdapter(adapter);
 
-            NewDrinkButton.setOnClickListener(new View.OnClickListener() {
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    String selected = (String)listView.getItemAtPosition(position);
+                    Log.d("ListView:", selected + " selected");
+                    Intent intent = new Intent(BoozeTracker.this, ViewDrink.class);
+                    intent.putExtra("DrinkDetails", listView.getItemAtPosition(position).toString());
+
+                    startActivity(intent);
+                }
+            });
+
+
+            newDrinkButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Log.d("BoozeTracker: ", "new drink button clicked");
@@ -48,6 +63,7 @@ public class BoozeTracker extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
+
         }
 
     private ArrayList<String> getAllBooze(DBHandler db) {
@@ -56,9 +72,6 @@ public class BoozeTracker extends AppCompatActivity {
         ArrayList<Booze> booze = db.getAllBooze();
         for (Booze drink : booze) {
             drinks.add(drink.getDrinkName());
-            drinks.add(drink.getLocation());
-            drinks.add(drink.getDate());
-            drinks.add(drink.getTime());
         }
         return drinks;
     }
