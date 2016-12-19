@@ -21,6 +21,7 @@ public class DBHandler extends SQLiteOpenHelper {
     private static final String KEY_DRINK_NAME = "drink";
     private static final String KEY_DATE = "date";
     private static final String KEY_TIME = "time";
+    private static final String KEY_LOCATION = "location";
 
     public DBHandler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -31,7 +32,7 @@ public class DBHandler extends SQLiteOpenHelper {
 
         String CREATE_TABLE = "CREATE TABLE " + TABLE_BOOZE + "("
                 + KEY_ID + " INTEGER PRIMARY KEY," + KEY_DRINK_NAME + " TEXT,"
-                + KEY_DATE + " TEXT, " + KEY_TIME + " TEXT )";
+                + KEY_DATE + " TEXT, " + KEY_TIME + " TEXT," + KEY_LOCATION + " TEXT )";
         db.execSQL(CREATE_TABLE);
     }
 
@@ -51,10 +52,11 @@ public class DBHandler extends SQLiteOpenHelper {
         String drinkName = booze.getDrinkName();
         String date = booze.getDate();
         String time = booze.getTime();
+        String location = booze.getLocation();
 
         String sql = "INSERT INTO " + TABLE_BOOZE +
-                "(" + KEY_DRINK_NAME + "," + KEY_DATE + "," + KEY_TIME + ") " + "VALUES ('"
-                + drinkName + "','" + date + "','" + time + "')";
+                "(" + KEY_DRINK_NAME + "," + KEY_DATE + "," + KEY_TIME + "," + KEY_LOCATION + ") " + "VALUES ('"
+                + drinkName + "','" + date + "','" + time + "','" + location + "')";
         runSQL(sql);
     }
 
@@ -115,13 +117,15 @@ public class DBHandler extends SQLiteOpenHelper {
         int drinkNameColumnNum = cursor.getColumnIndex(KEY_DRINK_NAME);
         int dateColumnNum = cursor.getColumnIndex(KEY_DATE);
         int timeColumnNum = cursor.getColumnIndex(KEY_TIME);
+        int locationColumnNum = cursor.getColumnIndex(KEY_LOCATION);
 
         int id = Integer.parseInt(cursor.getString(idColumnNum));
         String drinkName = cursor.getString(drinkNameColumnNum);
         String date = cursor.getString(dateColumnNum);
         String time = cursor.getString(timeColumnNum);
+        String location = cursor.getString(locationColumnNum);
 
-        Booze booze = new Booze(id, drinkName, date, time);
+        Booze booze = new Booze(id, drinkName, date, time, location);
 
         return booze;
     }

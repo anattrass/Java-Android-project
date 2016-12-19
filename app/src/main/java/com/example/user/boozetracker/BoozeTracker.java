@@ -30,11 +30,10 @@ public class BoozeTracker extends AppCompatActivity {
 
             final DBHandler db = ((MainApplication)getApplication()).db;
 
-//            db.deleteAllBoozeEntries();
+          //db.deleteAllBoozeEntries();
             Log.d("Insert: ", "Inserting..");
-            db.addBooze(new Booze("Pint of Joker I.P.A", "08/12/16", "17:59"));
-            db.addBooze(new Booze("Vodka Coke", "09/12/16", "18:30"));
-            db.addBooze(new Booze("Mulled Wine", "10/12/16", "19:00"));
+           // db.addBooze(new Booze("Pint of Joker I.P.A", "08/12/16", "17:59", "Footlights"));
+          //  db.addBooze(new Booze("Vodka Coke", "09/12/16", "18:30", "Moriarty"));
 
 
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
@@ -57,6 +56,7 @@ public class BoozeTracker extends AppCompatActivity {
         ArrayList<Booze> booze = db.getAllBooze();
         for (Booze drink : booze) {
             drinks.add(drink.getDrinkName());
+            drinks.add(drink.getLocation());
             drinks.add(drink.getDate());
             drinks.add(drink.getTime());
         }

@@ -13,7 +13,7 @@ public class BoozeTest {
 
     @Before
     public void before() {
-        booze = new Booze("Gin and Tonic", "16/12/16", "15:59");
+        booze = new Booze("Gin and Tonic", "16/12/16", "15:59", "Pub");
     }
 
     @Test
@@ -47,6 +47,17 @@ public class BoozeTest {
     public void setTime() {
         booze.setTime("16:20");
         assertEquals("16:20", booze.getTime());
+    }
+
+    @Test
+    public void getLocation() {
+        assertEquals("Pub", booze.getLocation());
+    }
+
+    @Test
+    public void setLocation() {
+        booze.setLocation("The Crown");
+        assertEquals("The Crown", booze.getLocation());
     }
 
 }

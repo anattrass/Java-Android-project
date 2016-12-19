@@ -8,21 +8,25 @@ public class Booze {
     private String drinkName;
     private String date;
     private String time;
+    private String location;
 
     public Booze() {
     }
 
-    public Booze(int id, String drinkName, String date, String time) {
+    public Booze(int id, String drinkName, String date, String time, String location) {
         this.id = id;
         this.drinkName = drinkName;
         this.date = date;
         this.time = time;
+        this.location = location;
     }
 
-    public Booze(String drinkName, String date, String time) {
+    public Booze(String drinkName, String date, String time, String location) {
         this.drinkName = drinkName;
         this.date = date;
         this.time = time;
+        this.location = location;
+
     }
 
     public int getId() {
@@ -57,8 +61,16 @@ public class Booze {
         this.time = time;
     }
 
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
     @Override
     public String toString() {
-        return "Booze: " + drinkName + ". Date: " + date + ". Time " + time;
+        return "Booze: " + drinkName + ". Date: " + date + ". Time: " + time + ". Location: " + location;
     }
 }

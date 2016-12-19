@@ -14,6 +14,7 @@ public class NewDrink extends AppCompatActivity {
     EditText drinkNameEditText;
     EditText dateEditText;
     EditText timeEditText;
+    EditText locationEditText;
     Button saveButton;
 
     @Override
@@ -25,6 +26,7 @@ public class NewDrink extends AppCompatActivity {
         drinkNameEditText = (EditText) findViewById(R.id.new_drink_name);
         dateEditText = (EditText) findViewById(R.id.date_of_drink);
         timeEditText = (EditText) findViewById(R.id.time_of_drink);
+        locationEditText = (EditText) findViewById(R.id.drink_location);
         saveButton = (Button) findViewById(R.id.button_save);
 
         saveButton.setOnClickListener(new View.OnClickListener() {
@@ -33,8 +35,9 @@ public class NewDrink extends AppCompatActivity {
                 String drinkName = drinkNameEditText.getText().toString();
                 String date = dateEditText.getText().toString();
                 String time = timeEditText.getText().toString();
+                String location = locationEditText.getText().toString();
 
-                Booze newBooze = new Booze(drinkName, date, time);
+                Booze newBooze = new Booze(drinkName, date, time, location);
                 db.addBooze(newBooze);
                 backToBoozeTracker();
             }
