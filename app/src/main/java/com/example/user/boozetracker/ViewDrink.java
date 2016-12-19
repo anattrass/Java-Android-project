@@ -1,7 +1,10 @@
 package com.example.user.boozetracker;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -30,6 +33,40 @@ public class ViewDrink extends AppCompatActivity {
         locationText = (TextView)findViewById(R.id.location_of_drink);
         deleteButton = (Button)findViewById(R.id.button_delete);
         backButton = (Button)findViewById(R.id.button_back);
+
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
+        final int id = extras.getInt("id");
+        final String drinkName = extras.getString("drinkName");
+        final String date = extras.getString("date");
+        final String time = extras.getString("time");
+        final String location = extras.getString("location");
+
+        drinkNameText.setText(drinkName);
+        dateText.setText(date);
+        timeText.setText(time);
+        locationText.setText(location);
+
+        deleteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("ViewDrink: ", "deleting drink with id " + id);
+                db.deleteDrink(id);
+                backToMainActivity();
+            }
+        });
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                backToMainActivity();
+            }
+        });
+    }
+
+    private void backToMainActivity() {
+        Intent intent = new Intent(ViewDrink.this, BoozeTracker.class);
+        startActivity(intent);
     }
 
 }

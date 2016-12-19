@@ -106,6 +106,18 @@ public class DBHandler extends SQLiteOpenHelper {
         return boozeList;
     }
 
+    public void deleteDrink(Booze booze) {
+        int id = booze.getId();
+
+        String sql = "DELETE FROM " + TABLE_BOOZE + " WHERE " + KEY_ID + " = " + id;
+        runSQL(sql);
+    }
+
+    public void deleteDrink(int id) {
+        String sql = "DELETE FROM " + TABLE_BOOZE + " WHERE " + KEY_ID + " = " + id;
+        runSQL(sql);
+    }
+
     public void deleteAllBoozeEntries() {
         String sql = "DELETE FROM " + TABLE_BOOZE;
         runSQL(sql);
