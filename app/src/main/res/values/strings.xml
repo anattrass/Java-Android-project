@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Booze Tracker</string>
+    <string name="app_name">ALCOLOGUE</string>
     <string name="new_drink">Log your tipple</string>
     <string name="save">Save drink</string>
     <string name="enter_new_drink">What did you have?</string>
@@ -8,4 +8,5 @@
     <string name="where">Where?</string>
     <string name="delete">Delete</string>
     <string name="back">Back</string>
+    <string name="enter">Enter Alcologue</string>
 </resources>

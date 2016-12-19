@@ -36,11 +36,12 @@ public class ViewDrink extends AppCompatActivity {
 
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
+
         final int id = extras.getInt("id");
-        String drinkName = extras.getString("drinkName");
-        String date = extras.getString("date");
-        String time = extras.getString("time");
-        String location = extras.getString("location");
+        final String drinkName = extras.getString("Selected Drink Name");
+        final String date = extras.getString("Selected Drink Date");
+        final String time = extras.getString("Selected Drink Time");
+        final String location = extras.getString("Selected Drink Location");
 
         drinkNameText.setText(drinkName);
         dateText.setText(date);
@@ -52,19 +53,19 @@ public class ViewDrink extends AppCompatActivity {
             public void onClick(View v) {
                 Log.d("ViewDrink: ", "deleting drink with id " + id);
                 db.deleteDrink(id);
-                backToMainActivity();
+                backToBoozeTracker();
             }
         });
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                backToMainActivity();
+                backToBoozeTracker();
             }
         });
     }
 
-    private void backToMainActivity() {
+    private void backToBoozeTracker() {
         Intent intent = new Intent(ViewDrink.this, BoozeTracker.class);
         startActivity(intent);
     }

@@ -47,8 +47,19 @@ public class BoozeTracker extends AppCompatActivity {
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     String selected = (String)listView.getItemAtPosition(position);
                     Log.d("ListView:", selected + " selected");
+
+                    Booze selectedDrink = db.getBooze(position+1);
+                    Log.d("Selected Drink: ", "Selected Drink: " + selectedDrink);
+
                     Intent intent = new Intent(BoozeTracker.this, ViewDrink.class);
-                    intent.putExtra("DrinkDetails", listView.getItemAtPosition(position).toString());
+                    Log.d("SelectedDrinkInfo", "Selected Drink: drink_info: " + selectedDrink.getDrinkName() +
+                            ", "  + selectedDrink.getDate() + ", " + selectedDrink.getTime() + ", " +
+                            selectedDrink.getLocation());
+
+                    intent.putExtra("Selected Drink Name", selectedDrink.getDrinkName());
+                    intent.putExtra("Selected Drink Date", selectedDrink.getDate());
+                    intent.putExtra("Selected Drink Time", selectedDrink.getTime());
+                    intent.putExtra("Selected Drink Location", selectedDrink.getLocation());
 
                     startActivity(intent);
                 }
