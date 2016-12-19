@@ -6,4 +6,6 @@
     <string name="new_date">What date?</string>
     <string name="new_time">What time?</string>
     <string name="where">Where?</string>
+    <string name="delete">Delete</string>
+    <string name="back">Back</string>
 </resources>
