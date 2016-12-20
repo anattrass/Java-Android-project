@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
@@ -11,20 +10,22 @@
         android:layout_height="wrap_content"
         android:background="@drawable/main_background">
 
-    <Button
+    <ImageButton
         android:id="@+id/button_new"
         android:text="@string/new_drink"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:src="@drawable/log_button"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginTop="25dp"
-
         android:layout_marginLeft="240dp"/>
 
     <ListView
         android:id="@+id/booze_list"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="60dp"
         android:layout_marginLeft="20dp"/>
 
     </RelativeLayout>

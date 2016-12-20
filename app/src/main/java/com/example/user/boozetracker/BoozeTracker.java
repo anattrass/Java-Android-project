@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ import java.util.List;
 public class BoozeTracker extends AppCompatActivity {
 
         ListView listView;
-        Button newDrinkButton;
+        ImageButton newDrinkButton;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +29,7 @@ public class BoozeTracker extends AppCompatActivity {
             setContentView(R.layout.activity_main);
 
             listView = (ListView) findViewById(R.id.booze_list);
-            newDrinkButton = (Button)findViewById(R.id.button_new);
+            newDrinkButton = (ImageButton)findViewById(R.id.button_new);
 
             final DBHandler db = ((MainApplication)getApplication()).db;
 
