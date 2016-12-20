@@ -5,11 +5,11 @@
     android:background="@drawable/background">
 
     <ImageButton
-        android:src="@drawable/icon"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:src="@drawable/home_button"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         android:scaleType="fitXY"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="150dp"
         android:layout_gravity="center"
         android:background="@android:color/transparent"
         android:onClick="enterBoozeTracker"/>
