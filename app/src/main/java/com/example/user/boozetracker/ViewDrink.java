@@ -37,7 +37,7 @@ public class ViewDrink extends AppCompatActivity {
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
 
-        final int id = extras.getInt("id");
+        final int id = extras.getInt("Selected Drink ID");
         final String drinkName = extras.getString("Selected Drink Name");
         final String date = extras.getString("Selected Drink Date");
         final String time = extras.getString("Selected Drink Time");

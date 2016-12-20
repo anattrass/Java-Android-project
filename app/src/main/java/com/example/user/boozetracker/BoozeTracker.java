@@ -60,6 +60,7 @@ public class BoozeTracker extends AppCompatActivity {
                     intent.putExtra("Selected Drink Date", selectedDrink.getDate());
                     intent.putExtra("Selected Drink Time", selectedDrink.getTime());
                     intent.putExtra("Selected Drink Location", selectedDrink.getLocation());
+                    intent.putExtra("Selected Drink ID", selectedDrink.getId());
 
                     startActivity(intent);
                 }
