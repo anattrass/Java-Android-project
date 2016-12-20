@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 /**
  * Created by user on 18/12/2016.
@@ -30,8 +31,10 @@ public class NewDrink extends AppCompatActivity {
         saveButton = (Button) findViewById(R.id.button_save);
 
         saveButton.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
+                Toast.makeText(NewDrink.this, R.string.new_drink_toast, Toast.LENGTH_LONG).show();
                 String drinkName = drinkNameEditText.getText().toString();
                 String date = dateEditText.getText().toString();
                 String time = timeEditText.getText().toString();

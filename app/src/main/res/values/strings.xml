@@ -8,4 +8,5 @@
     <string name="where">Where?</string>
     <string name="delete">Delete</string>
     <string name="back">Back</string>
+    <string name="new_drink_toast">New Drink Added</string>
 </resources>
