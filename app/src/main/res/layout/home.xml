@@ -4,13 +4,14 @@
     android:layout_height="match_parent"
     android:background="@drawable/background">
 
-    <Button
-
-        android:text="@string/enter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="500dp"
-        android:layout_marginLeft="120dp"
+    <ImageButton
+        android:src="@drawable/icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        android:layout_marginTop="400dp"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
         android:onClick="enterBoozeTracker"/>
 
 </LinearLayout>
