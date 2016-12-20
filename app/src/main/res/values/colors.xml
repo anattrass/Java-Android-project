@@ -3,4 +3,5 @@
     <color name="colorPrimary">#f7f7f7</color>
     <color name="colorPrimaryDark">#a8536b4c</color>
     <color name="colorAccent">#04ff3f</color>
+    <color name="listView">#663b8ad9</color>
 </resources>

@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by user on 19/12/2016.
@@ -51,6 +52,7 @@ public class ViewDrink extends AppCompatActivity {
         deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(ViewDrink.this, R.string.delete_drink_toast, Toast.LENGTH_LONG).show();
                 Log.d("ViewDrink: ", "deleting drink with id " + id);
                 db.deleteDrink(id);
                 backToBoozeTracker();
