@@ -33,7 +33,7 @@ public class BoozeTracker extends AppCompatActivity {
 
             final DBHandler db = ((MainApplication)getApplication()).db;
 
-           // db.deleteAllBoozeEntries();
+           //db.deleteAllBoozeEntries();
             Log.d("Insert: ", "Inserting..");
            // db.addBooze(new Booze("Pint of Joker I.P.A", "08/12/16", "17:59", "Footlights"));
           //  db.addBooze(new Booze("Vodka Coke", "09/12/16", "18:30", "Moriarty"));
