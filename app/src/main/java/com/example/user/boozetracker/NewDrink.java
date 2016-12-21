@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 /**
@@ -16,7 +17,7 @@ public class NewDrink extends AppCompatActivity {
     EditText dateEditText;
     EditText timeEditText;
     EditText locationEditText;
-    Button saveButton;
+    ImageButton saveButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +29,7 @@ public class NewDrink extends AppCompatActivity {
         dateEditText = (EditText) findViewById(R.id.date_of_drink);
         timeEditText = (EditText) findViewById(R.id.time_of_drink);
         locationEditText = (EditText) findViewById(R.id.drink_location);
-        saveButton = (Button) findViewById(R.id.button_save);
+        saveButton = (ImageButton) findViewById(R.id.button_save);
 
         saveButton.setOnClickListener(new View.OnClickListener() {
 

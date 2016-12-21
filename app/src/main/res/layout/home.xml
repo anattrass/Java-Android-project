@@ -2,14 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background">
+    android:background="@drawable/homepage_01">
 
     <ImageButton
-        android:src="@drawable/home_button"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+        android:src="@drawable/button_begin"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
         android:scaleType="fitXY"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="400dp"
         android:layout_gravity="center"
         android:background="@android:color/transparent"
         android:onClick="enterBoozeTracker"/>

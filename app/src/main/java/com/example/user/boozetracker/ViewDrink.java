@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,8 +19,8 @@ public class ViewDrink extends AppCompatActivity {
     TextView dateText;
     TextView timeText;
     TextView locationText;
-    Button deleteButton;
-    Button backButton;
+    ImageButton deleteButton;
+    ImageButton backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +33,8 @@ public class ViewDrink extends AppCompatActivity {
         dateText = (TextView)findViewById(R.id.drink_date);
         timeText = (TextView)findViewById(R.id.drink_time);
         locationText = (TextView)findViewById(R.id.location_of_drink);
-        deleteButton = (Button)findViewById(R.id.button_delete);
-        backButton = (Button)findViewById(R.id.button_back);
+        deleteButton = (ImageButton)findViewById(R.id.button_delete);
+        backButton = (ImageButton)findViewById(R.id.button_back);
 
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
