@@ -2,9 +2,9 @@
     <string name="app_name">Alcologue</string>
     <string name="new_drink">Log your tipple</string>
     <string name="save">Save drink</string>
-    <string name="enter_new_drink">What did you have?</string>
-    <string name="new_date">What date?</string>
-    <string name="new_time">What time?</string>
+    <string name="enter_new_drink">What did you drink?</string>
+    <string name="new_date">DD/MM/YY</string>
+    <string name="new_time">Time (--:--)</string>
     <string name="where">Where?</string>
     <string name="delete">Delete</string>
     <string name="back">Back</string>
