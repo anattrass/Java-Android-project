@@ -4,7 +4,7 @@
     <string name="save">Save drink</string>
     <string name="enter_new_drink">What did you drink?</string>
     <string name="new_date">DD/MM/YY</string>
-    <string name="new_time">Time (--:--)</string>
+    <string name="new_time">Time --:--</string>
     <string name="where">Where?</string>
     <string name="delete">Delete</string>
     <string name="back">Back</string>
