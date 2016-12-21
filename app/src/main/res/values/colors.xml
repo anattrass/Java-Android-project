@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#f7f7f7</color>
     <color name="colorPrimaryDark">#d880379b</color>
-    <color name="colorAccent">#04ff3f</color>
+    <color name="colorAccent">#f9ffe520</color>
     <color name="listView">#d880379b</color>
     <color name="ViewDrinkText">#ffffff</color>
 </resources>

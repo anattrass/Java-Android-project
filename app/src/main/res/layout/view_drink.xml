@@ -2,16 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/view_drink_background">
+    android:background="@drawable/see_drink">
 
     <TextView
         android:id="@+id/drink_name"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="39dp"
         android:textSize="30dp"
         android:textColor="@color/ViewDrinkText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"/>
+        android:layout_marginLeft="25dp"/>
 
     <TextView
         android:id="@+id/drink_date"
@@ -20,25 +20,25 @@
         android:textColor="@color/ViewDrinkText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"/>
+        android:layout_marginLeft="25dp"/>
 
     <TextView
         android:id="@+id/drink_time"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:textSize="30dp"
         android:textColor="@color/ViewDrinkText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"/>
+        android:layout_marginLeft="25dp"/>
 
     <TextView
         android:id="@+id/location_of_drink"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="12dp"
         android:textSize="30dp"
         android:textColor="@color/ViewDrinkText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"/>
+        android:layout_marginLeft="25dp"/>
 
     <ImageButton
         android:src="@drawable/button_delete"
